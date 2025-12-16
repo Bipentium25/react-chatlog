@@ -2,6 +2,7 @@ import './App.css';
 import chatdata from './data/messages.json';
 import { useState } from 'react';
 import ChatLog from './components/Chatlog';
+import ColorChoice from './components/ColorChoice';
 //import ChatEntry from './components/ChatEntry';
 
 
@@ -29,11 +30,14 @@ const App = () => {
   const local = chatData[0].sender;
   const remote = chatData.find(chat => chat.sender !== local).sender;
 
-
-  const togglecolor = () => {
-    const [prevColor, setColorCallback] = useState('black');
-    const colorOfChoice = 
-    setColorCallback = new_color;
+  const colorChoice = {local : localcolor,
+    remote : remoteColor
+  };
+  const [prevColor, setColorCallback] = useState(colorChoice);
+  const togglecolor = (sender, color ='') => {
+    
+    setColorCallback(prevColor.map(if (sender in colorChoice)
+    return colorChoice[sender] = color ));
   };
 
 

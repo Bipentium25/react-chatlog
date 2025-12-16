@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-const ColorChoice = (choice) => {
-  const heart = props.liked ? '❤️' : '🤍';
+const ColorChoice = (sender) => {
   return (
     <div className >
-        <h1>{local}'s color</h1>
-        <button className='btn rouge'>🔴</button>
+        <h1 className={sender}>{sender}'s color</h1>
+        <button className='btn rouge' >🔴</button>
         <button className='btn orange'>🟠</button>
         <button className='btn jaune'>🟡</button>
         <button className='btn vert'>🟢</button>
@@ -15,5 +14,7 @@ const ColorChoice = (choice) => {
 };
 
 ColorChoice.prototype = {
-  color: PropTypes.string.isRequired,
-}
+  sender: PropTypes.string.isRequired,
+};
+
+export default ColorChoice;
