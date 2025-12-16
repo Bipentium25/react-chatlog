@@ -2,7 +2,7 @@ import './ChatEntry.css';
 import PropTypes from 'prop-types';
 import TimeStamp from './TimeStamp';
 
-const ChatEntry = ({ id, sender, body, timeStamp, liked, toggleLike, isLocal = false }) => {
+const ChatEntry = ({ id, sender, body, timeStamp, liked, toggleLike = () => {}, isLocal = false }) => {
   const heart = liked ? '❤️' : '🤍';
   return (
     // Replace the outer tag name with a semantic element that fits our use case
