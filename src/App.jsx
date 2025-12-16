@@ -29,6 +29,17 @@ const App = () => {
   const local = chatData[0].sender;
   const remote = chatData.find(chat => chat.sender !== local).sender;
 
+
+  const togglecolor = () => {
+    const [prevColor, setColorCallback] = useState('black');
+    const colorOfChoice = 
+    setColorCallback = new_color;
+  };
+
+
+
+
+
   return (
     <div id="App">
       <header>
