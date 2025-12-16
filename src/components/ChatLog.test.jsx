@@ -1,4 +1,4 @@
-import ChatLog from './ChatLog';
+import ChatLog from './components/Chatlog';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
